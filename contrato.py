@@ -21,6 +21,19 @@ class ContaEnum(str, Enum):
     conta03 = 'Conjunta'
 
 class Compras(BaseModel):
+    """
+    Classe de despesas geradas de custos diários.
+
+    Args: AJUSTAR
+    descricao: DescricaoEnum
+    parcela: PositiveInt | None  # Número inteiro positivo ou None  
+    dt_compra: datetime
+    valor: PositiveFloat
+    nome: NomeEnum
+    conta: ContaEnum
+    observacao: str
+
+    """
     descricao: DescricaoEnum
     parcela: PositiveInt | None  # Número inteiro positivo ou None  
     dt_compra: datetime
