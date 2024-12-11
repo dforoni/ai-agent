@@ -40,7 +40,7 @@ class Compras(BaseModel):
     valor: PositiveFloat
     nome: NomeEnum
     conta: ContaEnum
-    observacao: str
+    observacao: str | None
 
     @validator('descricao')
     def validate_descricao(cls, v):
@@ -55,7 +55,7 @@ class Compras(BaseModel):
         return v
     
     @validator('conta')
-    def validate_nome(cls, v):
+    def validate_conta(cls, v):
         if v not in ContaEnum:
             raise ValueError(f"{v} não existe essa conta.")
         return v

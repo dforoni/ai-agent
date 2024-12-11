@@ -24,9 +24,11 @@ def salvar_dados_postgres(dados: Compras):
             host=DB_HOST,
             dbname=DB_NAME,
             user=DB_USER,
-            password=DB_PASS,
-            port="5432"
+            password=DB_PASS     
         )
+        # Mensagem de sucesso para a conexão
+        st.success("Conexão com o banco de dados realizada com sucesso!")
+
         cursor = conn.cursor()
         
         # Inserção dos dados na tabela de compras

@@ -7,8 +7,8 @@ CREATE TABLE streamlit.fluxo_caixa (
     parcela INTEGER,
     dt_compra DATE,
     valor NUMERIC,
-    nome VARCHAR(20),
-    conta VARCHAR(20),
+    nome VARCHAR(50),
+    conta VARCHAR(50),
     observacao VARCHAR(255)
 
 );

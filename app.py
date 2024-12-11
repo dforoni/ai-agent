@@ -28,9 +28,13 @@ def main():
                                     observacao = observacao)
             
             st.title("**Detalhes da Compra:**")
-            st.write(dados_compra)
-            salvar_dados_postgres(dados_compra)
-        
+            st.write(dados_compra) 
+         
+            try:
+                salvar_dados_postgres(dados_compra)
+            except Exception as e:
+                st.error(f"Erro ao salvar no banco de dados: {e}")
+     
         except ValidationError as e:
             st.error(f"Deu erro: {e}")     
        
